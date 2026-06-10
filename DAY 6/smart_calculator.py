@@ -1,20 +1,22 @@
-print("==============================")
+print("========================================")
 print("   PYTHON SMART CALCULATOR   ")
-print("==============================")
+print("========================================")
 
-while true:
-    print("\n--- main menu ---")
-    print("1. add (+)")
-    print("2. subtract (-)")
-    print("3. multiply (*)")
-    print("4. divide (/)")
-    print("5. exit")
-    choice = input("enter your choice (1-5): ")
-
-if choice == '5':
-     print("\nThank you for using Smart Calculator. Goodbye! ")
-     break
-
+while True:
+  print("\n--- Main Menu ---")
+  print("1. Add (+)")
+  print("2. Subtract (-)")
+  print("3. Multiply (*)")
+  print("4. Divide (/)")
+  print("5. Exit")
+  
+  choice = input("Enter choice (1-5): ")
+  
+  # Check for exit first
+  if choice == '5':
+    print("\nThank you for using Smart Calculator. Goodbye! ")
+    break
+  
   if choice in ['1', '2', '3', '4']:
     try:
       num1 = float(input("Enter first number: "))
@@ -30,6 +32,7 @@ if choice == '5':
     elif choice == '3':
       print(f"Result: {num1} * {num2} = {num1 * num2}")
     elif choice == '4':
+      
       if num2 == 0:
         print(" Error: Division by zero is not allowed!")
       else:
