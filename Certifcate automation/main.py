@@ -28,12 +28,10 @@ for index,name in enumerate(names,start=1):
 
     draw.text(text_position,name,fill="black",font=font)
 
-    safe_filename = f"{name}.png"
-
-    output_path = os.path.join("Certificates",safe_filename)
+    pdf_path = os.path.join("Certificates", f"{name}.pdf")
 
 
-    Certificate_template.save(output_path)
+    rgb_image = Certificate_template.convert('RGB')
+    rgb_image.save(pdf_path, format="PDF", resolution=100.0)
 
     print(f'{index}, Certificate Generator for the name {name} is created successfully!')
-
